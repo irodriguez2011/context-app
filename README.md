@@ -1,7 +1,22 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+=======
+# React Context API Proof of Concept
+
+## Overview
+
+This repository serves as a proof of concept to demonstrate the use of the Context API in a React application. Context API is a feature in React that allows for effective state management across different components without the need to prop drill.
+
+## Features
+
+- Fetching data from an external API using Axios.
+- Global state management using React's Context API.
+- Displaying a list of posts and handling API loading states.
+- Form component for submitting new posts
+>>>>>>> 623d6cba16de0161ff4ccf2c765db3310d8f295f
 ## Available Scripts
 
 In the project directory, you can run:
