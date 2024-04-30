@@ -3,9 +3,8 @@ import context from "./Context";
 import CircularProgress from "@mui/material/CircularProgress";
 import { Typography, Card, CardContent, Grid, Box } from "@mui/material";
 
-const Container = () => {
-  const { data, apiError, isLoading } = useContext(context);
-  console.log(data);
+const Container: React.FC = () => {
+  const { data, apiError, isLoading } = useContext(context)!;
 
   if (isLoading) {
     return <CircularProgress />;

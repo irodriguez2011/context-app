@@ -2,8 +2,9 @@ import "../Styles/App.css";
 import Provider from "./Provider";
 import Container from "./Container";
 import PostsForm from "./PostsForm";
+import React from "react";
 
-function App() {
+const App: React.FC = () => {
   return (
     <Provider>
       <div className="App">
@@ -12,6 +13,6 @@ function App() {
       </div>
     </Provider>
   );
-}
+};
 
 export default App;

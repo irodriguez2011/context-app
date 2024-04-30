@@ -1,11 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, ReactNode } from "react";
 import axios from "axios";
 import Context from "./Context";
 
-const Provider = ({ children }) => {
-  const [data, setData] = useState([]);
-  const [apiError, setApiError] = useState(false);
-  const [isLoading, setIsLoading] = useState(false);
+interface IProviderProps {
+  children: ReactNode;
+}
+
+const Provider: React.FC<IProviderProps> = ({ children }) => {
+  const [data, setData] = useState<any[]>([]);
+  const [apiError, setApiError] = useState<boolean>(false);
+  const [isLoading, setIsLoading] = useState<boolean>(false);
 
   const fetchData = async () => {
     setIsLoading(true);
@@ -24,7 +28,6 @@ const Provider = ({ children }) => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log("data", data);
 
   return (
     <Context.Provider value={{ data, setData, apiError, isLoading }}>

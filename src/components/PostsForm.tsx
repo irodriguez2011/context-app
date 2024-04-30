@@ -3,13 +3,13 @@ import React, { useState, useContext } from "react";
 import context from "./Context";
 import { TextField, Button, Box, Paper, Typography } from "@mui/material";
 
-const PostsForm = () => {
-  const { setData } = useContext(context);
-  const [title, setTitle] = useState("");
-  const [body, setBody] = useState("");
-  const [postsError, setPostsError] = useState(false);
+const PostsForm: React.FC = () => {
+  const { setData } = useContext(context)!;
+  const [title, setTitle] = useState<string>("");
+  const [body, setBody] = useState<string>("");
+  const [postsError, setPostsError] = useState<boolean>(false);
 
-  const handleSubmitForm = async (e) => {
+  const handleSubmitForm = async (e: React.FormEvent) => {
     e.preventDefault();
     try {
       const post = { title, body, userId: 1 };
